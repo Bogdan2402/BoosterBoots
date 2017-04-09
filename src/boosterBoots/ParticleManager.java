@@ -44,7 +44,7 @@ public class ParticleManager extends BukkitRunnable{
 				if(boots.getItemMeta().getLore()!=null && boots.getItemMeta().getLore().size()>1){
 					String lore = boots.getItemMeta().getLore().get(1);
 
-					if((p.isGliding() || (p.isSneaking() && BBMain.boolVerticalTakeoffEnabled)) && (boots.getEnchantmentLevel(Enchantment.PROTECTION_FALL)>=6 && boots.getItemMeta().getDisplayName().contains("Booster"))){
+					if((p.isGliding() || (p.isSneaking() && BBMain.boolVerticalTakeoffEnabled)) && (boots.getEnchantmentLevel(Enchantment.PROTECTION_FALL)>=6 && boots.getItemMeta().getDisplayName().contains("ІbІl”скор€ющие"))){
 						
 						if(lore.contains(BBMain.orange)){
 							playParticles(p, onlinePlayers, "orange", Particle.FLAME, particleAmount);

@@ -78,7 +78,7 @@ public class BoosterBoots implements Listener{
 			double speed = 0;
 
 			//check if Player is gliding and wearing Booster Boots
-			if(!p.isSneaking() && boots!=null && boots.getEnchantmentLevel(Enchantment.PROTECTION_FALL)>=6 && BBMain.checkPerms(p, "bb.use", false) && boots.getItemMeta().getDisplayName().contains("Booster")){
+			if(!p.isSneaking() && boots!=null && boots.getEnchantmentLevel(Enchantment.PROTECTION_FALL)>=6 && BBMain.checkPerms(p, "bb.use", false) && boots.getItemMeta().getDisplayName().contains("ІbІl”скор€ющие")){
 
 				//EXPERIMENTAL NCP fix
 				p.addAttachment(plugin, "nocheatplus.checks", true, BBMain.nocheatplusExemption);
@@ -99,7 +99,7 @@ public class BoosterBoots implements Listener{
 				if(p.isGliding()){
 					//warn player before his elytra will break
 					if(warnElytra==true && elytra.getDurability()>400){
-						p.sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.GOLD+BBMain.elytraAboutToBreak);
+						p.sendMessage(ChatColor.AQUA+"”скор€ющие ботинки І8>> "+ChatColor.GOLD+BBMain.elytraAboutToBreak);
 					}
 
 					//search for fuel
@@ -159,7 +159,7 @@ public class BoosterBoots implements Listener{
 				}
 			}
 		}
-		p.sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.RED+BBMain.outOfFuel);
+		p.sendMessage(ChatColor.AQUA+"”скор€ющие ботинки І8>> "+ChatColor.RED+BBMain.outOfFuel);
 		return false;
 	}
 }

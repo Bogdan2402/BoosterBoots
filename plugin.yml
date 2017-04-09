@@ -6,7 +6,7 @@ commands:
   bb:
     permission: bb.admin.reload
     usage: '/bb reload'
-    description: 'Reloads the config'
+    description: 'Перезагрузить конфиг'
 permissions:
   bb.*:
     default: op

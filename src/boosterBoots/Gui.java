@@ -46,9 +46,9 @@ public class Gui implements Listener {
 	public void onPrepareAnvilEvent(PrepareAnvilEvent event){
 		try{
 			String name = event.getResult().getItemMeta().getDisplayName();
-			if(name.contains("Booster")){
+			if(name.contains("ІbІl”скор€ющие")){
 				event.getView().close();
-				event.getView().getPlayer().sendMessage(ChatColor.AQUA+"[Booster Boots] " +ChatColor.RED+BBMain.enchantmentError);
+				event.getView().getPlayer().sendMessage(ChatColor.AQUA+"”скор€ющие ботинки І8>> " +ChatColor.RED+BBMain.enchantmentError);
 			}
 		}catch(Exception e){
 
@@ -59,7 +59,7 @@ public class Gui implements Listener {
 	public void onPrepareItemCraftEvent(PrepareItemCraftEvent event){
 		try{
 			Player p = (Player) event.getView().getPlayer();
-			if(event.getRecipe().getResult().getItemMeta().getDisplayName().contains("Booster Boots")){
+			if(event.getRecipe().getResult().getItemMeta().getDisplayName().contains("ІbІl”скор€ющие ботинки")){
 				if(!BBMain.checkPerms(p, "bb.craft", false)){
 					event.getView().close();
 				}
@@ -126,7 +126,7 @@ public class Gui implements Listener {
 				ItemStack boots = event.getView().getPlayer().getInventory().getBoots();
 				ItemMeta meta = boots.getItemMeta();
 
-				if(boots.getEnchantmentLevel(Enchantment.PROTECTION_FALL)>=6 && meta.getDisplayName().contains("Booster")){
+				if(boots.getEnchantmentLevel(Enchantment.PROTECTION_FALL)>=6 && meta.getDisplayName().contains("ІbІl”скор€ющие")){
 
 					if(lore.size()<1){
 						lore.add(null);
@@ -136,7 +136,7 @@ public class Gui implements Listener {
 					Player p = (Player) event.getView().getPlayer();
 
 					//reset the displayname
-					meta.setDisplayName("Booster Boots");
+					meta.setDisplayName("ІbІl”скор€ющие ботинки");
 
 					//and add the particle color to the displayname
 					if(event.getCurrentItem().equals(orange)){
@@ -157,17 +157,17 @@ public class Gui implements Listener {
 					}else if(event.getCurrentItem().equals(none)){
 						lore.set(1, BBMain.particlesDisabled);
 						meta.setDisplayName(ChatColor.WHITE+meta.getDisplayName());
-						p.sendMessage(ChatColor.AQUA+"[Booster Boots] "+ ChatColor.WHITE+BBMain.particlesDisabled);
+						p.sendMessage(ChatColor.AQUA+"”скор€ющие ботинки І8>> "+ ChatColor.WHITE+BBMain.particlesDisabled);
 					}
 
 					else if(event.getCurrentItem().equals(elytra)){
 						lore.set(0, BBMain.vto+": "+ChatColor.RED+BBMain.disabled);
-						p.sendMessage(ChatColor.AQUA+"[Booster Boots] "+ ChatColor.WHITE+BBMain.vtoDisabled);
+						p.sendMessage(ChatColor.AQUA+"”скор€ющие ботинки І8>> "+ ChatColor.WHITE+BBMain.vtoDisabled);
 					}
 
 					else if(event.getCurrentItem().equals(rocket)){
 						lore.set(0, BBMain.vto+": "+ChatColor.GREEN+BBMain.enabled);
-						p.sendMessage(ChatColor.AQUA+"[Booster Boots] "+ ChatColor.WHITE+BBMain.vtoEnabled);
+						p.sendMessage(ChatColor.AQUA+"”скор€ющие ботинки І8>> "+ ChatColor.WHITE+BBMain.vtoEnabled);
 					}
 
 					meta.setLore(lore);
@@ -199,7 +199,7 @@ public class Gui implements Listener {
 	public void setBootsLore(Player p, ChatColor chatColor, String color, String permission){
 		if(BBMain.checkPerms(p, "bb.particles."+permission, false)){
 			lore.set(1, BBMain.particles+": "+chatColor+color);
-			p.sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.WHITE+BBMain.changedParticles1+" "+chatColor+color+ChatColor.WHITE+BBMain.changedParticles2);
+			p.sendMessage(ChatColor.AQUA+"”скор€ющие ботинки І8>> "+ChatColor.WHITE+BBMain.changedParticles1+" "+chatColor+color+ChatColor.WHITE+BBMain.changedParticles2);
 		}
 	}
 

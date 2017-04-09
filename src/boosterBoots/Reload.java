@@ -30,7 +30,7 @@ public class Reload implements CommandExecutor {
 		if((sender instanceof Player || sender instanceof ConsoleCommandSender) && arg3.length > 0 && arg3[0].equals("reload")){
 			main.reloadConfig();
 			main.loadConfig();
-			sender.sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.GREEN+"Configuration reloaded!");
+			sender.sendMessage(ChatColor.AQUA+"Ускоряющие ботинки §8>> "+ChatColor.GREEN+"Конфигурация перезагружена!");
 			return true;
 		}
 		return false;

@@ -11,11 +11,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 package boosterBoots;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Scanner;
-
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -104,29 +100,15 @@ public class BBMain extends JavaPlugin{
 		loadConfig();
 
 		//add Recipes
-		addRecipe(Material.DIAMOND_BOOTS, "Booster Boots", diamondRecipe, 100);
-		addRecipe(Material.IRON_BOOTS, "Booster Boots", ironRecipe, 75);
-		addRecipe(Material.GOLD_BOOTS, "Booster Boots", goldRecipe, 75);
-		addRecipe(Material.LEATHER_BOOTS, "Booster Boots", leatherRecipe, 10);
-		addRecipe(Material.CHAINMAIL_BOOTS, "Booster Boots", chainRecipe, 50);
-
-		//warn that flying has to be enabled
-		if(boolVerticalTakeoffEnabled && !Bukkit.getAllowFlight()){
-			Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.RED+"[WARNING]: Please enable flying in the server.properties file to use vertical take-off !");
-			Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.RED+"[WARNING]: Vertical take-off WILL trigger most anti-cheat plugins !");
-		}else{
-			Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.GOLD+"[Info]: This plugin can trigger anti-cheat plugins!");
-		}
+		addRecipe(Material.DIAMOND_BOOTS, "ІbІl”скор€ющие ботинки", diamondRecipe, 100);
+		addRecipe(Material.IRON_BOOTS, "ІbІl”скор€ющие ботинки", ironRecipe, 75);
+		addRecipe(Material.GOLD_BOOTS, "ІbІl”скор€ющие ботинки", goldRecipe, 75);
+		addRecipe(Material.LEATHER_BOOTS, "ІbІl”скор€ющие ботинки", leatherRecipe, 10);
+		addRecipe(Material.CHAINMAIL_BOOTS, "ІbІl”скор€ющие ботинки", chainRecipe, 50);
 
 		if(bbemListener.enableParticles){
 			@SuppressWarnings("unused")
 			BukkitTask task = particleManager.runTaskTimer(this, 0, 1);
-		}
-
-		if(checkVersion){
-			isVersionUpToDate();
-		}else{
-			Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.RED+"[Info]: Version check disabled, make sure you are running the latest version!");
 		}
 	}
 
@@ -276,31 +258,11 @@ public class BBMain extends JavaPlugin{
 			if(perm.contains("particles")){
 				p.sendMessage(ChatColor.RED+storeAd);
 			}else{
-				p.sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.RED+noPerm1+" "+ChatColor.DARK_RED+perm+ChatColor.RED+" "+noPerm2);
+				p.sendMessage(ChatColor.AQUA+"”скор€ющие ботинки І8>> "+ChatColor.RED+noPerm1+" "+ChatColor.DARK_RED+perm+ChatColor.RED+" "+noPerm2);
 			}
 			return false;
 		}else{
 			return false;
-		}
-	}
-
-	private void isVersionUpToDate(){
-		try {
-			URL versionFile = new URL("https://www.dropbox.com/s/mvmct901y01v77z/version.txt?dl=1");
-			@SuppressWarnings("resource")
-			Scanner scanner = new Scanner(versionFile.openStream());
-			String newestVersion = scanner.next();
-			String news = "Update news: ";
-			while(scanner.hasNext()){
-				news = news+" "+scanner.next();
-			}
-			if(!this.getDescription().getVersion().equals(newestVersion)){
-				Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.RED+"[WARNING]: You are currently using version: "+this.getDescription().getVersion()+", Newest version is: "+newestVersion);
-				Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.RED+"[WARNING]: You are using an outdated version ! You can get the newest version here: "+ChatColor.YELLOW+"https://www.spigotmc.org/resources/booster-boots.21792/");
-				Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.WHITE+news);
-			}
-		} catch (Exception e) {
-			Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.RED+"[WARNING]: Unable to perform version check ! You can get the newest version here: https://www.spigotmc.org/resources/booster-boots.21792/");
 		}
 	}
 }
